@@ -7,6 +7,7 @@ body {
     margin-top: 10rem;
     max-width: 800px;
     height: 100vh;
+
 }
 
 .col {
@@ -16,6 +17,8 @@ body {
 
 .card {
     width: 28rem;
+    background-color: #343737;
+
 }
 
 .card-header {
@@ -23,9 +26,8 @@ body {
     justify-content: space-around;
     align-items: center;
     height: 150px;
-    background: rgb(203,166,0);
-    background: linear-gradient(90deg, rgba(203,166,0,1) 0%, rgba(0,154,154,1) 100%);
-}
+    background: rgb(0,148,94);
+    background: linear-gradient(90deg, rgba(0,148,94,1) 0%, rgba(1,126,126,1) 100%);}
 
 .search-form {
     border-radius: 20px;
@@ -42,12 +44,13 @@ i {
     color: lightgray;
 }
 
+
 .contact-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 1.8rem;
-    background-color: #343737;
+    /*background-color: #343737;*/
 }
 
 .icon-name {
@@ -71,7 +74,7 @@ i {
     padding: 0.3rem 2rem;
     margin: 15px 0;
     border-radius: 0 20px 0 20px;
-    background-color: #00d5d5;
+    background-color: #00945e;
     font-size: 0.8em;
 }
 
@@ -83,7 +86,7 @@ a.contact {
 hr {
     margin: 0;
     min-height: 7px;
-    color: #009a9a;
+    color: #017e7e;
     opacity: 1;
 }
 
