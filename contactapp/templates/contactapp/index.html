@@ -46,7 +46,7 @@
                     </div>
 <!-- CONTACT SECTION -->
 
-                    {% for contact in contacts.reverse %}
+                    {% for contact in contacts %}
                         <a href="{% url 'contact-detail' contact.pk %}" class="contact">
 
                             <div class="contact-section">
