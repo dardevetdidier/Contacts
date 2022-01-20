@@ -1,0 +1,122 @@
+body {
+    font-family: "Lato", sans-serif;
+    background-color: #292929;
+
+}
+
+.navbar {
+    display: flex;
+    height: 15vh;
+    justify-content: center;
+    background-color: #343737;
+}
+
+.navbar-brand {
+    margin: 0 auto;
+    font-size: 2em;
+    color: white;
+}
+
+.container {
+    margin-top: 3rem;
+    max-width: 800px;
+    height: 100vh;
+
+}
+
+.col {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    width: 25rem;
+    background-color: #343737;
+
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    padding-left: 2em;
+    background: rgb(0,148,94);
+    background: linear-gradient(90deg, rgba(0,148,94,1) 0%, rgba(1,126,126,1) 100%);
+}
+
+.header-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-name p {
+    margin: 0.8em 0 0 0;
+    font-size: 1.8em;
+    color: white;
+
+}
+
+.header-icon-name {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.header-icon-name p {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.header-icon-name i {
+    font-size: 1.3em;
+    color: white;
+    margin-right: 0.8em;
+}
+.header-icons {
+    display: flex;
+    justify-content: space-between;
+}
+.header-icons a {
+    text-decoration: none;
+    color: white;
+}
+
+.header-icons i {
+    font-size: 1.5em;
+    color: white;
+    margin-left: 0.5em;
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 1.5em 2em;
+}
+
+.icon-name {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 1.5em;
+}
+.icon-name i {
+    font-size: 1.6em;
+    margin: 0;
+    color: white;
+}
+
+.contact-name {
+    font-size: 1.1em;
+    color: white;
+    margin: 0 2em;
+}
+
+hr {
+    margin: 0;
+    min-height: 7px;
+    color: white;
+    opacity: 1;
+}
+

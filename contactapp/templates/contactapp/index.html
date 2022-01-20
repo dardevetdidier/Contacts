@@ -39,27 +39,32 @@
 
                         <input class="search-form form-control form-control-md" type="text" placeholder="Chercher Contact"
                                aria-label=".form-control-md example">
-                        <a href="#">
+                        <a href="{% url 'add-contact' %}">
                             <i class="add-contact fas fa-plus-circle"></i>
                         </a>
 
                     </div>
 <!-- CONTACT SECTION -->
-                    <a href="#" class="contact">
 
-                        <div class="contact-section">
+                    {% for contact in contacts.reverse %}
+                        <a href="{% url 'contact-detail' contact.pk %}" class="contact">
 
-                            <div class="icon-name">
-                                <i class="fas fa-user"></i>
-                                <p class="contact-name">John Doe</p>
+                            <div class="contact-section">
+
+                                <div class="icon-name">
+                                    <i class="fas fa-user"></i>
+                                    <p class="contact-name">{{ contact}}</p>
+                                </div>
+                                <div class="contact-group">
+                                    {{ contact.group.name }}
+                                </div>
+
                             </div>
-                            <div class="contact-group">
-                                Famille
-                            </div>
+                        </a>
+                        <hr>
+                    {% endfor %}
 
-                        </div>
-                    </a>
-                    <hr>
+
 
                 </div>
             </div>

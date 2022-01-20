@@ -67,12 +67,13 @@ i {
     /*background-color: #343737;*/
 }
 
-.add-content {
+.icon-name {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-right: 2em;
 }
-.add-content i {
+.icon-name i {
     font-size: 1.2em;
     margin: 0;
 }

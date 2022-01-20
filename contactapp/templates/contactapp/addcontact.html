@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -30,73 +30,53 @@
 
                 <div class="card">
 <!-- CARD HEADER -->
+
                     <div class="card-header">
-
                         <p>Nouveau Contact</p>
-
                     </div>
+
 <!-- CONTACT SECTION -->
 
-                    <section class="add-section">
+                    <form action="" method="POST">
+                        {% csrf_token %}
 
-                        <div class="add-content">
-                            <i class="fas fa-user"></i>
-                            <form action="" method="post">
-                                <input class="type" type="text" placeholder="Prénom   Nom" aria-label="addname">
-                            </form>
-                        </div>
-                    </section>
-
-                    <section class="add-section">
-
-                        <div class="add-content">
-                            <i class="fas fa-user"></i>
-                            <form action="" method="post">
-                                <input class="type" type="text" placeholder="Téléphone" aria-label="addname">
-                            </form>
-                        </div>
-                    </section>
-
-                    <section class="add-section">
-
-                        <div class="add-content">
-                            <i class="fas fa-user"></i>
-                            <form action="" method="post">
-                                <input class="type" type="email" placeholder="Email" aria-label="addname">
-                            </form>
-                        </div>
-                    </section>
-
-                    <section class="add-section">
-
-                        <div class="add-content">
-                            <i class="fas fa-user"></i>
-                            <form action="" method="post">
-                                <select class="type group form-select-lg " aria-label=".form-select-lg example">
-                                  <option selected>Choisir un groupe </option>
-                                  <option value="1">Famille</option>
-                                  <option value="2">Amis</option>
-                                  <option value="3">Travail</option>
-                                </select>
-                            </form>
-                        </div>
-                    </section>
-
-                    <a href="#" type="submit" class="add-confirm">
-                        <section class="add-button">
-
-                                <div class="addbutton">
+                        <section class="add-section">
+                                <div class="add-content">
                                     <i class="fas fa-user"></i>
-                                    <p>Ajouter Contact</p>
+                                    <input class="type" type="text" placeholder="Prénom   Nom" name="full_name">
                                 </div>
-
                         </section>
-                    </a>
 
+                        <section class="add-section">
+                            <div class="add-content">
+                                <i class="fas fa-phone"></i>
+                                <input class="type" type="text" placeholder="Téléphone" name="phone">
+                            </div>
+                        </section>
 
+                        <section class="add-section">
+                            <div class="add-content">
+                                <i class="fas fa-envelope"></i>
+                                <input class="type" type="email" placeholder="Email" name="email">
+                            </div>
+                        </section>
 
+                        <section class="add-section">
+                            <div class="add-content">
+                                <i class="fas fa-users"></i>
+                                    <select class="type group form-select-lg " name="group">
+                                      <option selected>Choisir un groupe </option>
+                                        {% for group in groups %}
+                                            <option value="{{ group.id }}">{{ group }}</option>
+                                        {% endfor %}
+                                    </select>
+                            </div>
+                        </section>
 
-
+                        <div class="add-button">
+                            <button type="submit" class="btn btn-dark btn-lg">Ajouter Contact</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
