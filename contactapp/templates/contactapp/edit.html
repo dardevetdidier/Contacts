@@ -64,12 +64,7 @@
                         <section class="add-section">
                             <div class="add-content">
                                 <i class="fas fa-users"></i>
-                                    <select class="type group form-select-lg " name="group">
-                                      <option selected>{{ contact.group}} </option>
-                                        {% for group in groups %}
-                                            <option value={{ group.id }}>{{ group }}</option>
-                                        {% endfor %}
-                                    </select>
+                              <input class="type" type="text" placeholder="{{ contact.group }}" name="group">
                             </div>
                         </section>
 

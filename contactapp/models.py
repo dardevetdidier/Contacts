@@ -1,18 +1,13 @@
 from django.db import models
 
-
-class Group(models.Model):
-    name = models.CharField(max_length=50)
-
-    def __str__(self):
-        return self.name
+CHOICES = [('Amis', 'amis'), ('Famille', 'famille'), ('Travail', 'travail')]
 
 
 class Contact(models.Model):
     full_name = models.CharField(max_length=100)
     phone = models.CharField(max_length=50)
     email = models.EmailField(max_length=50)
-    group = models.ForeignKey(to=Group, on_delete=models.SET_NULL, null=True)
+    group = models.CharField(max_length=50, choices=CHOICES)
     date_created = models.DateTimeField(auto_now_add=True)
 
     class Meta:

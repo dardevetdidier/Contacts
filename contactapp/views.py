@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.utils import timezone
 
-from .models import Contact, Group
+from .models import Contact
 from .forms import ContactForm
 
 
@@ -14,8 +14,6 @@ def index(request):
 
 
 def add_contact(request):
-    groups = Group.objects.all()
-
     form = ContactForm(request.POST)
     if form.is_valid():
         form.save()
@@ -24,7 +22,6 @@ def add_contact(request):
         form = ContactForm()
 
     context = {
-        'groups': groups,
         'form': form}
 
     return render(request, 'contactapp/addcontact.html', context=context)
@@ -38,7 +35,6 @@ def contact_detail(request, pk):
 
 def edit_contact(request, pk):
     contact = Contact.objects.get(pk=pk)
-    groups = Group.objects.all()
     edit_form = ContactForm(instance=contact)
 
     if request.method == 'POST':
@@ -51,7 +47,6 @@ def edit_contact(request, pk):
 
     else:
         context = {'contact': contact,
-                   'groups': groups,
                    'edit_form': edit_form
                    }
         return render(request, 'contactapp/edit.html', context=context)
