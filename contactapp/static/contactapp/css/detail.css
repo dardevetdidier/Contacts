@@ -19,7 +19,7 @@ body {
 
 .container {
     margin-top: 3rem;
-    max-width: 800px;
+    max-width: 460px;
     height: 100vh;
 
 }
@@ -29,8 +29,13 @@ body {
     justify-content: center;
 }
 
+a.back-arrow {
+    text-decoration: none;
+    color: white;
+    font-size: 2em;
+}
 .card {
-    width: 25rem;
+    width: 28rem;
     background-color: #343737;
 
 }
@@ -54,7 +59,6 @@ body {
     margin: 0.8em 0 0 0;
     font-size: 1.8em;
     color: white;
-
 }
 
 .header-icon-name {
@@ -62,6 +66,7 @@ body {
     justify-content: start;
     align-items: center;
 }
+
 .header-icon-name p {
     font-size: 1.2em;
     margin: 0;
@@ -72,6 +77,7 @@ body {
     color: white;
     margin-right: 0.8em;
 }
+
 .header-icons {
     display: flex;
     justify-content: space-between;
@@ -87,6 +93,9 @@ body {
     margin-left: 0.5em;
 }
 
+.header-icons i:hover {
+    color: grey;
+}
 .contact-section {
     display: flex;
     flex-direction: column;
