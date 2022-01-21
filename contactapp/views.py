@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.utils import timezone
+from django.core.paginator import Paginator
 
 from .models import Contact
 from .forms import ContactForm
@@ -7,8 +8,13 @@ from .forms import ContactForm
 
 def index(request):
     contacts = Contact.objects.all()
+    paginator = Paginator(contacts, 4)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
     context = {
-        'contacts': contacts
+        'contacts': contacts,
+        'page_obj': page_obj,
+        'paginator': paginator
     }
     return render(request, 'contactapp/index.html', context=context)
 

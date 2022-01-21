@@ -124,6 +124,9 @@ a.back-arrow {
     color: white;
 }
 
+.icon-name a {
+    text-decoration-color: white;
+}
 .contact-name {
     font-size: 1.1em;
     color: white;
