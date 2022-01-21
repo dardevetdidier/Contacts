@@ -76,6 +76,10 @@ a.back-arrow {
     margin-left: 1em;
 }
 
+select option {
+    background-color: #343737;
+    padding: 1em 1.5em;
+}
 
 .add-button {
     display: flex;

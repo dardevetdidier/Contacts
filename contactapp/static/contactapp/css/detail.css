@@ -19,9 +19,8 @@ body {
 
 .container {
     margin-top: 3rem;
-    max-width: 460px;
+    max-width: 420px;
     height: 100vh;
-
 }
 
 .col {
@@ -34,30 +33,37 @@ a.back-arrow {
     color: white;
     font-size: 2em;
 }
-.card {
-    width: 28rem;
-    background-color: #343737;
 
+.card {
+    width: 25rem;
+    background-color: #343737;
 }
 
 .card-header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
     height: 150px;
-    padding-left: 2em;
+    padding-left: 1em;
     background: rgb(0,148,94);
     background: linear-gradient(90deg, rgba(0,148,94,1) 0%, rgba(1,126,126,1) 100%);
 }
 
-.header-name {
+.group-edit {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.header-name p {
-    margin: 0.8em 0 0 0;
-    font-size: 1.8em;
+.name-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.card-header p {
+    margin: 0;
+    font-size: 2.2em;
     color: white;
 }
 
@@ -73,43 +79,45 @@ a.back-arrow {
 }
 
 .header-icon-name i {
-    font-size: 1.3em;
+    font-size: 1.2em;
     color: white;
     margin-right: 0.8em;
 }
 
-.header-icons {
+.edit-icons {
+    height: 2em;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
-.header-icons a {
+
+.edit-icons a {
     text-decoration: none;
     color: white;
 }
 
-.header-icons i {
+.edit-icons i {
     font-size: 1.5em;
     color: white;
-    margin-left: 0.5em;
+    margin-left: 1em;
 }
 
-.header-icons i:hover {
+.edit-icons i:hover {
     color: grey;
 }
+
 .contact-section {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    padding: 1.5em 2em;
+    justify-content: space-between;
+    padding: 1em 2em;
 }
 
 .icon-name {
     display: flex;
     align-items: center;
     justify-content: start;
-    margin-bottom: 1.5em;
+    margin: 2em 0;
 }
+
 .icon-name i {
     font-size: 1.6em;
     margin: 0;
@@ -121,11 +129,3 @@ a.back-arrow {
     color: white;
     margin: 0 2em;
 }
-
-hr {
-    margin: 0;
-    min-height: 7px;
-    color: white;
-    opacity: 1;
-}
-

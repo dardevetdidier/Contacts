@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.utils import timezone
 
 from .models import Contact
@@ -35,7 +35,7 @@ def contact_detail(request, pk):
 
 def edit_contact(request, pk):
     contact = Contact.objects.get(pk=pk)
-    edit_form = ContactForm(instance=contact)
+    form = ContactForm(instance=contact)
 
     if request.method == 'POST':
         edit_form = ContactForm(request.POST, instance=contact)
@@ -47,9 +47,12 @@ def edit_contact(request, pk):
 
     else:
         context = {'contact': contact,
-                   'edit_form': edit_form
+                   'form': form,
                    }
         return render(request, 'contactapp/edit.html', context=context)
 
 
-
+def delete_contact(request, pk):
+    contact = get_object_or_404(Contact, pk)
+    contact.delete()
+    return redirect('index')

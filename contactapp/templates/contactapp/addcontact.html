@@ -43,28 +43,32 @@
                         <section class="add-section">
                                 <div class="add-content">
                                     <i class="fas fa-user"></i>
-                                    <input class="type" type="text" placeholder="Prénom   Nom" name="full_name">
+                                    {{ form.full_name }}
+{#                                    <input class="type" type="text" placeholder="Prénom   Nom" name="full_name">#}
                                 </div>
                         </section>
 
                         <section class="add-section">
                             <div class="add-content">
                                 <i class="fas fa-phone"></i>
-                                <input class="type" type="text" placeholder="Téléphone" name="phone">
+                                {{ form.phone }}
+{#                                <input class="type" type="text" placeholder="Téléphone" name="phone">#}
                             </div>
                         </section>
 
                         <section class="add-section">
                             <div class="add-content">
                                 <i class="fas fa-envelope"></i>
-                                <input class="type" type="email" placeholder="Email" name="email">
+                                {{ form.email }}
+{#                                <input class="type" type="email" placeholder="Email" name="email">#}
                             </div>
                         </section>
 
                         <section class="add-section">
                             <div class="add-content">
                                 <i class="fas fa-users"></i>
-                                <input class="type" type="text" placeholder="Groupe" name="group">
+                                {{ form.group }}
+{#                                <input class="type" type="text" placeholder="Groupe" name="group">#}
 
                             </div>
                         </section>

@@ -36,47 +36,55 @@
             <div class="col">
                 <div class="card">
 <!-- CARD HEADER -->
-                    <div class="card-header">
 
-                        <div class="header-name">
-                            <p>{{ contact }}</p>
-                            <div class="header-icon-name">
-                                <i class="fas fa-users"></i>
-                                <p class="header-contact-name">{{ contact.group }}</p>
+                    <div class="card-header">
+                        <p class="card-header-contact">{{ contact }}</p>
+
+                        <div class="group-edit">
+                            <div class="name-group">
+                                <div class="header-icon-name">
+                                    <i class="fas fa-users"></i>
+                                    <p class="header-contact-name">{{ contact.group }}</p>
+                                </div>
+                            </div>
+
+                            <div class="edit-icons">
+                                <a href="{% url 'edit-contact' contact.id %}">
+                                    <i class="fas fa-user-edit"></i>
+                                </a>
+
+                                <a href="{% url 'add-contact' %}">
+                                    <i class="fas fa-user-minus"></i>
+                                </a>
                             </div>
 
                         </div>
-                        <div class="header-icons">
-                            <a href="{% url 'edit-contact' contact.id %}">
-                                <i class="fas fa-user-edit"></i>
-                            </a>
 
-                            <a href="{% url 'add-contact' %}">
-                                <i class="fas fa-user-minus"></i>
-                            </a>
-                        </div>
                     </div>
+
 <!-- CONTACT SECTION -->
 
 
                     <div class="contact-section">
+                        <div class="contact-phone-mail">
 
-                        <div class="icon-name">
-                            <i class="fas fa-phone"></i>
-                            <p class="contact-name">{{ contact.phone }}</p>
+                            <div class="icon-name">
+                                <i class="fas fa-phone"></i>
+                                <p class="contact-name">{{ contact.phone }}</p>
+                            </div>
+
+                            <div class="icon-name">
+                                <i class="fas fa-envelope"></i>
+                                <p class="contact-name">{{ contact.email }}</p>
+                            </div>
                         </div>
-
-                        <div class="icon-name">
-                            <i class="fas fa-envelope"></i>
-                            <p class="contact-name">{{ contact.email }}</p>
-                        </div>
-
                     </div>
 
-                    <hr>
+
                 </div>
             </div>
         </div>
     </div>
 </body>
 </html>
+
