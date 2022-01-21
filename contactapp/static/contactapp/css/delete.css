@@ -1,0 +1,110 @@
+body {
+    font-family: "Lato", sans-serif;
+    background-color: #292929;
+
+}
+
+.navbar {
+    display: flex;
+    height: 15vh;
+    justify-content: center;
+    background-color: #343737;
+}
+
+.navbar-brand {
+    margin: 0 auto;
+    font-size: 2em;
+    color: white;
+}
+
+.container {
+    margin-top: 3rem;
+    max-width: 420px;
+    height: 100vh;
+}
+
+.col {
+    display: flex;
+    justify-content: center;
+}
+
+a.back-arrow {
+    text-decoration: none;
+    color: white;
+    font-size: 2em;
+}
+
+.card {
+    width: 25rem;
+    background-color: #343737;
+}
+
+.card-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 150px;
+    padding-left: 1em;
+    background: rgb(0,148,94);
+    background: linear-gradient(90deg, rgba(0,148,94,1) 0%, rgba(1,126,126,1) 100%);
+}
+
+.card-header p {
+    margin: 0;
+    font-size: 2.2em;
+    color: white;
+}
+
+.header-icon-name {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.header-icon-name p {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.header-icon-name i {
+    font-size: 1.2em;
+    color: white;
+    margin-right: 0.8em;
+}
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em 0;
+}
+
+.main-section p {
+    text-align: center;
+    color: white;
+    font-size: 1em;
+    padding: 0 6em;
+}
+
+.icon-name {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1.5em;
+}
+
+.icon-name i {
+    font-size: 1.2em;
+    color: white;
+    margin-right: 0.8em;
+}
+
+.btn {
+    background-color: #017e7e;
+    border: #017e7e;
+}
+.btn:hover {
+    background-color: #8f0000;
+    border: #8f0000;
+}

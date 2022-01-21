@@ -28,7 +28,7 @@ def add_contact(request):
 
 
 def contact_detail(request, pk):
-    contact = Contact.objects.get(pk=pk)
+    contact = get_object_or_404(Contact, pk=pk)
     context = {'contact': contact}
     return render(request, 'contactapp/detail.html', context=context)
 
@@ -53,6 +53,10 @@ def edit_contact(request, pk):
 
 
 def delete_contact(request, pk):
-    contact = get_object_or_404(Contact, pk)
-    contact.delete()
-    return redirect('index')
+    contact = get_object_or_404(Contact, pk=pk)
+    context = {'contact': contact}
+
+    if request.method == 'POST':
+        contact.delete()
+        return redirect('index')
+    return render(request, 'contactapp/delete.html', context=context)
