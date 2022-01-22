@@ -19,6 +19,29 @@ def index(request):
     return render(request, 'contactapp/index.html', context=context)
 
 
+def search(request):
+    query = request.GET.get('query')
+    if not query:
+        contacts = Contact.objects.all()
+    else:
+        contacts = Contact.objects.filter(full_name__icontains=query)
+    if not contacts.exists():
+        contacts = Contact.objects.filter(group__icontains=query)
+
+    paginator = Paginator(contacts, 4)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
+    context = {'contacts': contacts,
+               'page_obj': page_obj,
+               'paginator': paginator,
+               'query': query,
+               }
+
+    return render(request, "contactapp/search.html", context=context)
+
+
+
 def add_contact(request):
     form = ContactForm(request.POST)
     if form.is_valid():
@@ -35,7 +58,9 @@ def add_contact(request):
 
 def contact_detail(request, pk):
     contact = get_object_or_404(Contact, pk=pk)
-    context = {'contact': contact}
+    previous_page = request.META.get('HTTP_REFERER')
+    context = {'contact': contact,
+               'previous_page': previous_page}
     return render(request, 'contactapp/detail.html', context=context)
 
 

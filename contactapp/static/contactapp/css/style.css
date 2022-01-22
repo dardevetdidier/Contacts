@@ -46,7 +46,13 @@ body {
 .search-form {
     border-radius: 20px;
     width: 18rem;
+}
 
+.message {
+    text-align: center;
+    color: white;
+    font-size: 1.2em;
+    margin-top: 3em;
 }
 
 i {
