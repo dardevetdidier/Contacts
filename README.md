@@ -2,7 +2,7 @@
 ___
 
 ## Table of Contents
-1. [General Info](#general info)
+1. [General Info](#general-info)
 2. [Technologies](#technologies)
 3. [Installation](#installation)
 
@@ -17,8 +17,8 @@ or sms.
 
 Application allows to add, edit, delete a contact
 
-<img src="images/home.png" width="300">
-<img src="images/edit_contact.png" width="300">
+<img src="images/home.png" width="400">
+<img src="images/edit_contact.png" width="400">
 
 ___
 
