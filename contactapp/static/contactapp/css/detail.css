@@ -4,19 +4,6 @@ body {
 
 }
 
-.navbar {
-    display: flex;
-    height: 15vh;
-    justify-content: center;
-    background-color: #343737;
-}
-
-.navbar-brand {
-    margin: 0 auto;
-    font-size: 2em;
-    color: white;
-}
-
 .container {
     margin-top: 3rem;
     max-width: 420px;

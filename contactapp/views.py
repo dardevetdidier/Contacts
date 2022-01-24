@@ -65,7 +65,8 @@ def contact_detail(request, pk):
     contact = get_object_or_404(Contact, pk=pk)
     previous_page = request.META.get('HTTP_REFERER')
     context = {'contact': contact,
-               'previous_page': previous_page}
+               'previous_page': previous_page,
+               }
     return render(request, 'contactapp/detail.html', context=context)
 
 

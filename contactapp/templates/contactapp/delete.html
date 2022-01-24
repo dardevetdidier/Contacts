@@ -1,76 +1,64 @@
+{% extends 'base.html' %}
+
 {% load static %}
 
 <!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% block style %}
+        <link rel="stylesheet" href="{% static "contactapp/css/delete.css" %}">
+    {% endblock %}
 
-
-    <!-- GOOGLE FONT -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static "contactapp/css/delete.css" %}">
-    <!-- FONTAWESOME -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-
-    <title>Supprimer Contact</title>
+    {% block title %}
+        <title>Supprimer Contact</title>
+    {% endblock %}
 </head>
 
 <body>
 
-    <header>
+    {% block content %}
 
-        <nav class="navbar">
-            <span class="navbar-brand">Supprimer Contact</span>
-        </nav>
-    </header>
+        <div class="container">
+            <div class="row justify-content-center">
 
-    <div class="container">
-        <div class="row justify-content-center">
+                <a href="{% url 'contact-detail' contact.id %}" class="back-arrow"><i class="fas fa-arrow-left"></i></a>
+                <div class="col">
+                    <div class="card">
+    <!-- CARD HEADER -->
 
-            <a href="{% url 'contact-detail' contact.id %}" class="back-arrow"><i class="fas fa-arrow-left"></i></a>
-            <div class="col">
-                <div class="card">
-<!-- CARD HEADER -->
+                        <div class="card-header">
+                            <p class="card-header-contact">{{ contact }}</p>
 
-                    <div class="card-header">
-                        <p class="card-header-contact">{{ contact }}</p>
+                            <div class="header-icon-name">
+                                <i class="fas fa-users"></i>
+                                <p class="header-contact-name">{{ contact.group }}</p>
+                            </div>
 
-                        <div class="header-icon-name">
-                            <i class="fas fa-users"></i>
-                            <p class="header-contact-name">{{ contact.group }}</p>
+
+
+                        </div>
+
+    <!-- CONTACT SECTION -->
+
+
+                        <div class="main-section">
+                            <p>Etes-vous sûr de vouloir supprimer le contact ?</p>
+                                <div class="icon-name">
+
+                                    <form action="" method="post">
+                                        {% csrf_token %}
+                                        <button type="submit" class="btn btn-dark btn-lg"><i class="fas fa-trash-alt"></i>Supprimer Contact</button>
+                                    </form>
+                                </div>
                         </div>
 
 
 
                     </div>
-
-<!-- CONTACT SECTION -->
-
-
-                    <div class="main-section">
-                        <p>Etes-vous sûr de vouloir supprimer le contact ?</p>
-                            <div class="icon-name">
-
-                                <form action="" method="post">
-                                    {% csrf_token %}
-                                    <button type="submit" class="btn btn-dark btn-lg"><i class="fas fa-trash-alt"></i>Supprimer Contact</button>
-                                </form>
-                            </div>
-                    </div>
-
-
-
                 </div>
             </div>
         </div>
-    </div>
+    {% endblock %}
 </body>
 </html>
 
