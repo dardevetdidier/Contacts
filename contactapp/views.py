@@ -91,3 +91,9 @@ def delete_contact(request, pk):
         contact.delete()
         return redirect('index')
     return render(request, 'contactapp/delete.html', context=context)
+
+
+def login(request):
+    context = {}
+    return render(request, 'contactapp/login.html', context=context)
+

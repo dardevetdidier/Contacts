@@ -27,3 +27,8 @@ class ContactForm(forms.ModelForm):
                                          'placeholder': 'Groupe'},
                                   choices=CHOICES)
         }
+
+
+class LoginForm(forms.ModelForm):
+    pass
+

@@ -4,6 +4,19 @@ body {
 
 }
 
+.navbar {
+    display: flex;
+    min-height: 150px;
+    justify-content: center;
+    background-color: #343737;
+}
+
+.navbar-brand {
+    margin: 0 auto;
+    font-size: 2em;
+    color: white;
+}
+
 .container {
     margin-top: 3rem;
     max-width: 460px;
@@ -14,12 +27,6 @@ body {
 .col {
     display: flex;
     justify-content: center;
-}
-
-a.back-arrow {
-    text-decoration: none;
-    color: white;
-    font-size: 2em;
 }
 
 .card {
@@ -34,18 +41,22 @@ a.back-arrow {
     align-items: center;
     height: 150px;
     background: rgb(0,148,94);
-    background: linear-gradient(90deg, rgba(0,148,94,1) 0%, rgba(1,126,126,1) 100%);}
-
-.card-header p{
-    margin: 0 auto;
-    font-size: 2em;
-    color: white;
+    background: linear-gradient(90deg, rgba(0,148,94,1) 0%, rgba(1,126,126,1) 100%);
 }
 
-.add-section {
+.card-header p {
+    color: white;
+    font-size: 1.8em;
+    margin: 0;
+}
+.login-form {
+    margin-top: 2em;
+}
+.login-section {
     padding: 1em 2em;
 }
-.add-content {
+
+.login-input {
     display: flex;
     align-items: center;
     padding: 1em ;
@@ -55,10 +66,9 @@ a.back-arrow {
                 inset 6px -6px 12px #383b3b;
 }
 
-.add-content i {
-    font-size: 1.2em;
+.login-input i {
+    font-size: 1.3em;
     color: white;
-    border-radius: 100px;
     margin-right: 1em;
 }
 
@@ -68,16 +78,6 @@ a.back-arrow {
     outline: none;
     color: white;
     font-size: 1.2em;
-}
-
-.group {
-    background-color: #343737;
-    margin-left: 1em;
-}
-
-select option {
-    background-color: #343737;
-    padding: 1em 1.5em;
 }
 
 .add-button {
@@ -96,4 +96,17 @@ select option {
 
 .btn:hover {
     background-color: #00945e;
+}
+
+.create-account {
+    margin-left: 18rem;
+    color: white;
+}
+
+.create-account a {
+    color: grey;
+}
+
+.create-account a:hover{
+    color: white;
 }
