@@ -1,4 +1,5 @@
 from django import forms
+from django.contrib.auth.models import User
 
 from .models import Contact
 
@@ -30,5 +31,18 @@ class ContactForm(forms.ModelForm):
 
 
 class LoginForm(forms.ModelForm):
-    pass
+    class Meta:
+        model = User
+        fields = ['username', 'password']
+
+        widgets = {
+            'username': forms.TextInput(attrs={
+                'class': 'type',
+                'placeholder': "Nom d'utilisateur",
+            }),
+            'password': forms.PasswordInput(attrs={
+                'class': 'type',
+                'placeholder': 'Mot de passe'
+            })
+        }
 
