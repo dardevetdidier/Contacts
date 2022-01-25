@@ -102,7 +102,6 @@ def delete_contact(request, pk):
 
 
 def login_user(request):
-
     if request.method == 'POST':
         data = request.POST
         username = data['username']
@@ -120,3 +119,7 @@ def login_user(request):
     context = {'login_form': login_form}
     return render(request, 'contactapp/login.html', context=context)
 
+
+def logout_user(request):
+    logout(request)
+    return redirect('login')
