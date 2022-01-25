@@ -2,9 +2,7 @@
 
 {% load static %}
 
-<!doctype html>
-<html lang="en">
-<head>
+
     {% block style %}
         <link rel="stylesheet" href="{% static "contactapp/css/addstyle.css" %}">
     {% endblock %}
@@ -12,9 +10,6 @@
     {% block title %}
         <title>Modifier Contact</title>
     {% endblock %}
-</head>
-
-<body>
 
     {% block content %}
         <div class="container">
@@ -74,6 +69,3 @@
 
 
     {% endblock %}
-
-</body>
-</html>

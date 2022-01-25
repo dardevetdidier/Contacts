@@ -11,4 +11,5 @@ urlpatterns = [
     path('delete-contact/<int:pk>/', views.delete_contact, name='delete-contact'),
     path('search/', views.search, name='search'),
     path('logout/', views.logout_user, name='logout'),
+    path('register/', views.register, name='register'),
 ]

@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+    {% block style %}
+        <link rel="stylesheet" href="{% static 'contactapp/css/register.css' %}">
+    {% endblock %}
+
+    {% block title %}
+        <title>S'enregistrer</title>
+    {% endblock %}
+
+    {% block content %}
+
+    <div class="container">
+        <div class="row justify-content-center">
+
+            <div class="col">
+                <div class="card">
+<!-- CARD HEADER -->
+                    <div class="card-header">
+                        <p>S'enregistrer</p>
+                    </div>
+<!-- CONTACT SECTION -->
+
+                    <div class="register-form">
+
+                        <form action="" method="post">
+                            {% csrf_token %}
+
+                            <section class="register-section">
+                                <div class="register-input">
+                                    <i class="fas fa-user"></i>
+                                    {{ register_form.username }}
+{#                                    <input type="text" class="type" placeholder="Nom d'utilisateur">#}
+                                </div>
+                            </section>
+
+                            <section class="register-section">
+                                <div class="register-input">
+                                    <i class="fas fa-at"></i>
+                                    {{ register_form.email }}
+{#                                    <input type="email" class="type" placeholder="Email">#}
+                                </div>
+                            </section>
+
+                            <section class="register-section">
+                                <div class="register-input">
+                                    <i class="fas fa-key"></i>
+                                    {{ register_form.password1 }}
+{#                                    <input type="password" class="type" placeholder="Mot de passe">#}
+                                </div>
+                            </section>
+
+                            <section class="register-section">
+                                <div class="register-input">
+                                    <i class="fas fa-key"></i>
+                                    {{ register_form.password2 }}
+{#                                    <input type="password" class="type" placeholder="Mot de passe">#}
+                                </div>
+                            </section>
+
+                            <div class="add-button">
+                                <button type="submit" class="btn btn-dark btn-lg">S'enregistrer</button>
+                            </div>
+
+                        </form>
+                        <p class="login-account">Déjà un compte ? <a  href="{% url 'login' %}">Se connecter</a></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

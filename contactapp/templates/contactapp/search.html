@@ -2,9 +2,7 @@
 
 {% load static %}
 
-<!doctype html>
-<html lang="fr">
-<head>
+
     {% block style %}
         <link rel="stylesheet" href="{% static "contactapp/css/style.css" %}">
     {% endblock %}
@@ -12,9 +10,7 @@
     {% block title %}
         <title>Contacts</title>
     {% endblock %}
-</head>
 
-<body>
 
     {% block content %}
     <header>
@@ -100,6 +96,3 @@
     <!-- END PAGINATION -->
 
     {% endblock %}
-
-</body>
-</html>

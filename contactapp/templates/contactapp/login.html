@@ -2,9 +2,7 @@
 
 {% load static %}
 
-<!doctype html>
-<html lang="fr">
-<head>
+
     {% block style %}
         <link rel="stylesheet" href="{% static "contactapp/css/login.css" %}">
     {% endblock %}
@@ -12,9 +10,7 @@
     {% block title %}
         <title>Login</title>
     {% endblock %}
-</head>
 
-<body>
 
     {% block content %}
 
@@ -46,9 +42,6 @@
                             <hr>
                         {% endif %}
 
-
-
-
                         <form action="" method="post">
                             {% csrf_token %}
 
@@ -73,7 +66,7 @@
                             </div>
 
                         </form>
-                        <p class="create-account"><a  href="">Créer un compte</a></p>
+                        <p class="create-account"><a  href="{% url 'register' %}">Créer un compte</a></p>
 
                     </div>
                 </div>
@@ -81,5 +74,3 @@
         </div>
     </div>
     {% endblock %}
-</body>
-</html>
