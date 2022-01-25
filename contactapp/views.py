@@ -5,7 +5,7 @@ from django.utils import timezone
 from django.core.paginator import Paginator
 from django.contrib.auth import authenticate, login, logout
 from .models import Contact
-from .forms import ContactForm, LoginForm
+from .forms import ContactForm, LoginForm, RegisterForm
 
 
 @login_required(login_url='login')
@@ -126,4 +126,12 @@ def logout_user(request):
 
 
 def register(request):
-    return render(request, 'contactapp/register.html')
+    if request.method == 'POST':
+        register_form = RegisterForm(request.POST)
+        if register_form.is_valid():
+            register_form.save()
+        return redirect('login')
+
+    register_form = RegisterForm()
+    context = {'register_form': register_form, }
+    return render(request, 'contactapp/register.html', context=context)
